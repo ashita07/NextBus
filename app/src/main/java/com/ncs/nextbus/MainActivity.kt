@@ -60,8 +60,7 @@ class MainActivity : ComponentActivity() {
 
             val cameraPositionState= rememberCameraPositionState()
             NextBusTheme {
-                GoogleMap(modifier = Modifier.fillMaxSize(), uiSettings = MapUiSettings(zoomControlsEnabled = false),cameraPositionState=cameraPositionState,
-                    properties = MapProperties(isMyLocationEnabled = true)) {
+                GoogleMap(modifier = Modifier.fillMaxSize(), uiSettings = MapUiSettings(zoomControlsEnabled = false),cameraPositionState=cameraPositionState) {
                 }
             }
         }
