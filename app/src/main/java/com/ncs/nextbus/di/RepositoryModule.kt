@@ -1,4 +1,4 @@
-package com.ncs.tradezy.di
+package com.ncs.nextbus.di
 import com.ncs.nextbus.repository.RealtimeDBRepository
 import com.ncs.nextbus.repository.RealtimeRepository
 import dagger.Binds

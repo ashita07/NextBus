@@ -1,4 +1,4 @@
-package com.ncs.tradezy.di
+package com.ncs.nextbus.di
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
