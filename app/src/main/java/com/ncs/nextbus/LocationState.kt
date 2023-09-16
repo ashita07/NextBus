@@ -1,7 +1,5 @@
 package com.ncs.nextbus
 
-import com.ncs.tradezy.RealtimeDB
-
 
 data class LocationState(
 

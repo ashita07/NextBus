@@ -20,6 +20,6 @@ object FirebaseModule {
     fun providesFirabaseAuth():FirebaseAuth=Firebase.auth
     @Provides
     @Singleton
-    fun providesRealtimeDb(): DatabaseReference =Firebase.database.reference.child("bus_location")
+    fun providesRealtimeDb(): DatabaseReference =Firebase.database.reference.child("data")
 
 }

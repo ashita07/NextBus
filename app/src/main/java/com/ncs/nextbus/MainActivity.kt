@@ -23,6 +23,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.viewinterop.AndroidView
@@ -47,6 +48,7 @@ import com.google.maps.android.compose.MapProperties
 import com.google.maps.android.compose.MapUiSettings
 import com.google.maps.android.compose.Marker
 import com.google.maps.android.compose.MarkerState
+import com.google.maps.android.compose.Polyline
 import com.google.maps.android.compose.rememberCameraPositionState
 import com.ncs.nextbus.ui.theme.NextBusTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -140,21 +142,21 @@ class MainActivity : ComponentActivity() {
             }
         }
         if (res.item.isNotEmpty()){
-//            val markerPosition = LatLng(res.item[0].item?.latitude!!,  res.item[0].item?.longitude!!)
-//            Log.d("testt", res.item[0].item?.latitude.toString())
-//            NextBusTheme {
-//                GoogleMap(
-//                    modifier = Modifier.fillMaxSize(),
-//                    uiSettings = MapUiSettings(zoomControlsEnabled = false, mapToolbarEnabled = true),
-//                    cameraPositionState = cameraPositionState,
-//                    properties = MapProperties(isMyLocationEnabled = true)
-//                ) {
-//                    Marker(
-//                        state=MarkerState(markerPosition),
-//                        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED),
-//                    )
-//                }
-//            }
+            val markerPosition = LatLng(res.item[0].item?.latitude!!,  res.item[0].item?.longitude!!)
+            NextBusTheme {
+                GoogleMap(
+                    modifier = Modifier.fillMaxSize(),
+                    uiSettings = MapUiSettings(zoomControlsEnabled = false, mapToolbarEnabled = true),
+                    cameraPositionState = cameraPositionState,
+                    properties = MapProperties(isMyLocationEnabled = true)
+                ) {
+                    Marker(
+                        state=MarkerState(markerPosition),
+                        icon = BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED),
+                    )
+
+                }
+            }
         }
         else{
             NextBusTheme {
