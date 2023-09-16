@@ -346,6 +346,7 @@ fun GoogleMapView(modifier: Modifier,onMapLoaded: () -> Unit, googlePlacesInfoVi
     }
 }
 
+@SuppressLint("SuspiciousIndentation")
 @Composable
 fun MapMarker(
     modifier: Modifier,
