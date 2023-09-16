@@ -15,20 +15,35 @@ class SpScreen : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.sp_layout)
 
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN
-        )
+
+//        window.setFlags(
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//            WindowManager.LayoutParams.FLAG_FULLSCREEN
+//        )
         val logo  = findViewById<ImageView>(R.id.ivLogo)
-        val spanimation = AnimationUtils.loadAnimation(this,R.anim.sp_animation)
-
-        logo.startAnimation(spanimation)
-
-        Handler().postDelayed({
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
+////        val spanimation = AnimationUtils.loadAnimation(this,R.anim.sp_animation)
+        logo.alpha=0f
+//        logo.animate().setDuration(2000).alpha(1f).withEndAction{
+//            val intent = Intent(this,MainActivity::class.java)
+//            startActivity(intent)
+//            (android.R.anim.slide_in_left,android.R.anim.slid)
+//            finish()
+//        }
+        logo.animate().setDuration(2000).alpha(1f).withEndAction{
+            val i= Intent(this,MainActivity::class.java)
+            startActivity(i)
+            overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
             finish()
-        },3000)
+        }
+
+
+//        logo.startAnimation(spanimation)
+
+//        Handler().postDelayed({
+//            val intent = Intent(this,MainActivity::class.java)
+//            startActivity(intent)
+//            finish()
+//        },3000)
 
 
 }}
