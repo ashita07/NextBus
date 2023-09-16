@@ -1,32 +1,22 @@
-package com.ncs.tradezy
+package com.ncs.nextbus
 
 
-import android.location.Location
 import java.io.Serializable
 
 data class RealtimeDB(
-    val item: locationData? = null,
-    val key: String? = ""
-) : Serializable {
+    val item: locationData?=null,
+    val key: String?=""
+)  {
 
     data class locationData(
-        val accuracy: Double,
-        val altitude: Int,
-        val bearing: Double,
-        val bearingAccuracyDegrees: Int,
-        val complete: Boolean,
-        val elapsedRealtimeNanos: Long,
-        val elapsedRealtimeUncertaintyNanos: Int,
-        val fromMockProvider: Boolean,
-        val latitude: Double,
-        val longitude: Double,
-        val mock: Boolean,
-        val provider: String,
-        val speed: Double,
-        val speedAccuracyMetersPerSecond: Int,
-        val time: Long,
-        val verticalAccuracyMeters: Double
-    ) : Serializable
-
-    constructor() : this(null, "")
+        val startinglat:Double?=null,
+        val startinglong:Double?=null,
+        val endinglat:Double?=null,
+        val endinglong:Double?=null,
+        val accuracy: Double?=null,
+        val latitude: Double?=null,
+        val longitude: Double?=null,
+        val speed: Double?=null,
+        val time: Long?=null,
+    )
 }
