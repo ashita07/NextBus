@@ -15,7 +15,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-         />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivTagline"
+        android:layout_width="276dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/easy_ride_for_tough_terrains"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

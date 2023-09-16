@@ -21,8 +21,10 @@ class SpScreen : AppCompatActivity(){
 //            WindowManager.LayoutParams.FLAG_FULLSCREEN
 //        )
         val logo  = findViewById<ImageView>(R.id.ivLogo)
+        val tagline = findViewById<ImageView>(R.id.ivTagline)
 ////        val spanimation = AnimationUtils.loadAnimation(this,R.anim.sp_animation)
         logo.alpha=0f
+        tagline.alpha=0f
 //        logo.animate().setDuration(2000).alpha(1f).withEndAction{
 //            val intent = Intent(this,MainActivity::class.java)
 //            startActivity(intent)
@@ -30,6 +32,12 @@ class SpScreen : AppCompatActivity(){
 //            finish()
 //        }
         logo.animate().setDuration(1500).alpha(1f).withEndAction{
+            val i= Intent(this,MainActivity::class.java)
+            startActivity(i)
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+            finish()
+        }
+        tagline.animate().setDuration(1500).alpha(1f).withEndAction{
             val i= Intent(this,MainActivity::class.java)
             startActivity(i)
             overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
